@@ -193,7 +193,7 @@ section {
 }
 
 .hero-content {
-    max-width: 600px;
+    max-width: 650px;
 }
 
 .greeting {
@@ -210,15 +210,18 @@ section {
     line-height: 1.1;
     margin-bottom: 15px;
     background: linear-gradient(to right, #fff, #94a3b8);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .role {
-    font-size: 1.8rem;
+    font-size: clamp(1.2rem, 3vw, 1.7rem);
     color: var(--text-muted);
     margin-bottom: 25px;
     font-weight: 500;
+    white-space: nowrap;
+    min-height: 2rem;
 }
 
 .description {
@@ -615,6 +618,17 @@ footer {
     box-shadow: 0 10px 30px rgba(59, 130, 246, 0.12);
 }
 
+.typing-cursor {
+    border-right: 3px solid var(--accent-blue);
+    padding-right: 4px;
+    animation: blink-caret 0.8s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--accent-blue); }
+}
+
 /* RESPONSIVIDADE */
 @media screen and (max-width: 900px) {
     .about-grid {
@@ -642,6 +656,11 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+    .role {
+        white-space: normal;
+        min-height: 3.5rem;
+    }
+    
     .nav-links {
         display: none;
         flex-direction: column;

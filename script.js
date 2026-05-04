@@ -74,15 +74,39 @@ const langEnEl = document.querySelector('.lang-en');
 // Recupera a preferência salva no localStorage (padrão é 'pt')
 let currentLang = localStorage.getItem('portfolioLang') || 'pt';
 
+// Função de animação de digitação
+function typeWriterEffect(element, text, speed = 50) {
+    element.innerHTML = '';
+    // Adiciona classe para o cursor piscante
+    element.classList.add('typing-cursor');
+    let i = 0;
+    
+    // Limpa qualquer intervalo anterior se a função for chamada rapidamente
+    if(element.typingInterval) {
+        clearInterval(element.typingInterval);
+    }
+    
+    element.typingInterval = setInterval(() => {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+        } else {
+            clearInterval(element.typingInterval);
+        }
+    }, speed);
+}
+
 // Função para aplicar os textos baseados no idioma
 function applyLanguage(lang) {
     const elementsToTranslate = document.querySelectorAll('[data-pt]');
     
     elementsToTranslate.forEach(el => {
-        if (lang === 'en' && el.dataset.en) {
-            el.innerHTML = el.dataset.en;
+        let textToSet = (lang === 'en' && el.dataset.en) ? el.dataset.en : el.dataset.pt;
+        
+        if (el.classList.contains('typing-effect')) {
+            typeWriterEffect(el, textToSet);
         } else {
-            el.innerHTML = el.dataset.pt;
+            el.innerHTML = textToSet;
         }
     });
 
