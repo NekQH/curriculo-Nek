@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Felipe | Sistemas de Informação & Power Platform</title>
+    <title data-pt="Felipe | Sistemas de Informação & Power Platform"
+        data-en="Felipe | Information Systems & Power Platform">Felipe | Sistemas de Informação & Power Platform</title>
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,41 +15,60 @@
 </head>
 
 <body>
+    <!-- Tela de Carregamento -->
+    <div id="loader" class="loader-container">
+        <div class="loader-content">
+            <i class="fa-solid fa-code fa-beat loader-icon"></i>
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
     <!-- Navbar -->
     <nav class="navbar">
         <div class="logo">
             <i class="fa-solid fa-code tech-icon"></i> Felipe
         </div>
         <ul class="nav-links">
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#sobre">Sobre & Formação</a></li>
-            <li><a href="#experiencia">Experiência</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#certificacoes">Certificações</a></li>
+            <li><a href="#inicio" data-pt="Início" data-en="Home">Início</a></li>
+            <li><a href="#sobre" data-pt="Sobre & Formação" data-en="About & Education">Sobre & Formação</a></li>
+            <li><a href="#experiencia" data-pt="Experiência" data-en="Experience">Experiência</a></li>
+            <li><a href="#habilidades" data-pt="Habilidades" data-en="Skills">Habilidades</a></li>
+            <li><a href="#certificacoes" data-pt="Certificações" data-en="Certifications">Certificações</a></li>
         </ul>
-        <div class="menu-toggle">
-            <i class="fa-solid fa-bars"></i>
+        <div class="nav-actions">
+            <button id="lang-toggle" class="lang-btn" aria-label="Alternar Idioma">
+                <span class="lang-pt active">PT</span>
+                <span class="lang-divider">/</span>
+                <span class="lang-en">EN</span>
+            </button>
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
     </nav>
 
     <!-- Header / Início -->
     <section id="inicio" class="hero fade-in-section">
         <div class="hero-content">
-            <h2 class="greeting">Olá, mundo! Eu sou</h2>
+            <h2 class="greeting" data-pt="Olá, mundo! Eu sou" data-en="Hello, world! I am">Olá, mundo! Eu sou</h2>
             <h1 class="name">Felipe</h1>
-            <h3 class="role">Desenvolvedor em Power Platform & Dados</h3>
-            <p class="description">
+            <h3 class="role" data-pt="Desenvolvedor em Power Platform & Dados"
+                data-en="Power Platform & Data Developer">Desenvolvedor em Power Platform & Dados</h3>
+            <p class="description"
+                data-pt="Desenvolvedor focado em otimização de processos, automação de tarefas e visualização de dados. Transformo problemas complexos em soluções escaláveis utilizando a Microsoft Power Platform."
+                data-en="Developer focused on process optimization, task automation, and data visualization. I transform complex problems into scalable solutions using the Microsoft Power Platform.">
                 Desenvolvedor focado em otimização de processos, automação de tarefas e visualização de dados.
                 Transformo problemas complexos em soluções escaláveis utilizando a Microsoft Power Platform.
             </p>
             <div class="hero-buttons">
-                <a href="#experiencia" class="btn btn-primary">Ver Experiência <i
-                        class="fa-solid fa-arrow-right"></i></a>
-                <a href="#contato" class="btn btn-secondary">Contato <i class="fa-regular fa-envelope"></i></a>
+                <a href="#experiencia" class="btn btn-primary"><span data-pt="Ver Experiência"
+                        data-en="View Experience">Ver Experiência</span> <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#contato" class="btn btn-secondary"><span data-pt="Contato" data-en="Contact">Contato</span> <i
+                        class="fa-regular fa-envelope"></i></a>
             </div>
         </div>
         <div class="hero-graphics">
-            <div class="code-block">
+            <div class="code-block floating">
                 <pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
     <span class="property">name</span>: <span class="string">'Felipe'</span>,
     <span class="property">university</span>: <span class="string">'PUCPR'</span>,
@@ -62,22 +82,28 @@
     <!-- Sobre e Formação -->
     <section id="sobre" class="about fade-in-section">
         <div class="container">
-            <h2 class="section-title"><i class="fa-solid fa-user-astronaut"></i> Sobre Mim</h2>
+            <h2 class="section-title"><i class="fa-solid fa-user-astronaut"></i> <span data-pt="Sobre Mim"
+                    data-en="About Me">Sobre Mim</span></h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>Atualmente estou cursando <strong>Sistemas de Informação na PUCPR</strong> e atuando como
+                    <p data-pt="Atualmente estou cursando <strong>Sistemas de Informação na PUCPR</strong> e atuando como Desenvolvedor Júnior na área de tecnologia."
+                        data-en="I am currently studying <strong>Information Systems at PUCPR</strong> and working as a Junior Developer in the technology field.">
+                        Atualmente estou cursando <strong>Sistemas de Informação na PUCPR</strong> e atuando como
                         Desenvolvedor Júnior na área de tecnologia.</p>
-                    <p>Minha grande paixão é utilizar dados e automação para facilitar o dia a dia das pessoas e das
+                    <p data-pt="Minha grande paixão é utilizar dados e automação para facilitar o dia a dia das pessoas e das empresas. Tenho forte atuação com a <strong>Microsoft Power Platform</strong>, criando dashboards gerenciais complexos, aplicativos low-code (Power Apps) e fluxos de automação avançados (Power Automate)."
+                        data-en="My great passion is using data and automation to facilitate the daily lives of people and companies. I have strong experience with the <strong>Microsoft Power Platform</strong>, creating complex management dashboards, low-code applications (Power Apps), and advanced automation flows (Power Automate).">
+                        Minha grande paixão é utilizar dados e automação para facilitar o dia a dia das pessoas e das
                         empresas. Tenho forte atuação com a <strong>Microsoft Power Platform</strong>, criando
                         dashboards gerenciais complexos, aplicativos low-code (Power Apps) e fluxos de automação
                         avançados (Power Automate).</p>
                 </div>
-                <div class="education-card">
+                <div class="education-card hover-glow">
                     <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
                     <div class="edu-info">
-                        <h3>Bacharelado em Sistemas de Informação</h3>
+                        <h3 data-pt="Bacharelado em Sistemas de Informação" data-en="Bachelor of Information Systems">
+                            Bacharelado em Sistemas de Informação</h3>
                         <h4>PUCPR (Pontifícia Universidade Católica do Paraná)</h4>
-                        <span class="edu-status">Cursando</span>
+                        <span class="edu-status" data-pt="Cursando" data-en="In Progress">Cursando</span>
                     </div>
                 </div>
             </div>
@@ -87,36 +113,49 @@
     <!-- Experiência Profissional -->
     <section id="experiencia" class="experience fade-in-section">
         <div class="container">
-            <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Experiência Profissional</h2>
+            <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> <span data-pt="Experiência Profissional"
+                    data-en="Professional Experience">Experiência Profissional</span></h2>
             <div class="timeline">
 
                 <!-- Kietec Junior -->
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
+                    <div class="timeline-dot pulse-animation"></div>
+                    <div class="timeline-content hover-glow">
                         <div class="exp-header">
-                            <h3>Desenvolvedor Junior</h3>
+                            <h3 data-pt="Desenvolvedor Junior" data-en="Junior Developer">Desenvolvedor Junior</h3>
                             <span class="company"><i class="fa-solid fa-building"></i> Kietec</span>
                         </div>
-                        <span class="date"><i class="fa-regular fa-calendar-alt"></i> Março de 2026 - Presente</span>
-                        <span class="location"><i class="fa-solid fa-location-dot"></i> Curitiba, PR (Híbrido)</span>
-                        <p>Atuação com foco no desenvolvimento de soluções avançadas utilizando Microsoft Power BI,
+                        <span class="date"><i class="fa-regular fa-calendar-alt"></i> <span
+                                data-pt="Março de 2026 - Presente" data-en="March 2026 - Present">Março de 2026 -
+                                Presente</span></span>
+                        <span class="location"><i class="fa-solid fa-location-dot"></i> <span
+                                data-pt="Curitiba, PR (Híbrido)" data-en="Curitiba, PR (Hybrid)">Curitiba, PR
+                                (Híbrido)</span></span>
+                        <p data-pt="Atuação com foco no desenvolvimento de soluções avançadas utilizando Microsoft Power BI, Power Automate e tecnologias integradas para análise de dados e automação empresarial."
+                            data-en="Acting with a focus on developing advanced solutions using Microsoft Power BI, Power Automate, and integrated technologies for data analysis and business automation.">
+                            Atuação com foco no desenvolvimento de soluções avançadas utilizando Microsoft Power BI,
                             Power Automate e tecnologias integradas para análise de dados e automação empresarial.</p>
                     </div>
                 </div>
 
                 <!-- Kietec Estagiário -->
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
+                    <div class="timeline-dot pulse-animation"></div>
+                    <div class="timeline-content hover-glow">
                         <div class="exp-header">
-                            <h3>Estagiário de Tecnologia</h3>
+                            <h3 data-pt="Estagiário de Tecnologia" data-en="Technology Intern">Estagiário de Tecnologia
+                            </h3>
                             <span class="company"><i class="fa-solid fa-building"></i> Kietec</span>
                         </div>
-                        <span class="date"><i class="fa-regular fa-calendar-alt"></i> Março de 2025 - Março de
-                            2026</span>
-                        <span class="location"><i class="fa-solid fa-location-dot"></i> Curitiba, PR (Presencial)</span>
-                        <p>Foco em soluções utilizando a Microsoft Power Platform (Power Apps, Power Automate, Power BI
+                        <span class="date"><i class="fa-regular fa-calendar-alt"></i> <span
+                                data-pt="Março de 2025 - Março de 2026" data-en="March 2025 - March 2026">Março de 2025
+                                - Março de 2026</span></span>
+                        <span class="location"><i class="fa-solid fa-location-dot"></i> <span
+                                data-pt="Curitiba, PR (Presencial)" data-en="Curitiba, PR (On-site)">Curitiba, PR
+                                (Presencial)</span></span>
+                        <p data-pt="Foco em soluções utilizando a Microsoft Power Platform (Power Apps, Power Automate, Power BI e Dataverse). Desenvolvimento de aplicações low-code para otimizar processos internos, automatizar tarefas rotineiras e facilitar a tomada de decisões. Criação de dashboards interativos, fluxos automatizados e aplicativos personalizados."
+                            data-en="Focus on solutions using the Microsoft Power Platform (Power Apps, Power Automate, Power BI, and Dataverse). Development of low-code applications to optimize internal processes, automate routine tasks, and facilitate decision-making. Creation of interactive dashboards, automated flows, and custom applications.">
+                            Foco em soluções utilizando a Microsoft Power Platform (Power Apps, Power Automate, Power BI
                             e Dataverse). Desenvolvimento de aplicações low-code para otimizar processos internos,
                             automatizar tarefas rotineiras e facilitar a tomada de decisões. Criação de dashboards
                             interativos, fluxos automatizados e aplicativos personalizados.</p>
@@ -125,16 +164,20 @@
 
                 <!-- SMAP Estagiário -->
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
+                    <div class="timeline-dot pulse-animation"></div>
+                    <div class="timeline-content hover-glow">
                         <div class="exp-header">
-                            <h3>Estagiário de TI</h3>
+                            <h3 data-pt="Estagiário de TI" data-en="IT Intern">Estagiário de TI</h3>
                             <span class="company"><i class="fa-solid fa-building"></i> SMAP</span>
                         </div>
-                        <span class="date"><i class="fa-regular fa-calendar-alt"></i> Setembro de 2024 - Fevereiro de
-                            2025</span>
+                        <span class="date"><i class="fa-regular fa-calendar-alt"></i> <span
+                                data-pt="Setembro de 2024 - Fevereiro de 2025"
+                                data-en="September 2024 - February 2025">Setembro de 2024 - Fevereiro de
+                                2025</span></span>
                         <span class="location"><i class="fa-solid fa-location-dot"></i> Curitiba, PR</span>
-                        <p>Aprendizado sólido em diversas áreas de TI, destacando o uso eficiente do Power BI. Gestão e
+                        <p data-pt="Aprendizado sólido em diversas áreas de TI, destacando o uso eficiente do Power BI. Gestão e manipulação de bancos de dados, criação e configuração de gateways para integração e atualização de dados em tempo real."
+                            data-en="Solid learning in various IT areas, highlighting the efficient use of Power BI. Management and manipulation of databases, creation and configuration of gateways for integration and real-time data updating.">
+                            Aprendizado sólido em diversas áreas de TI, destacando o uso eficiente do Power BI. Gestão e
                             manipulação de bancos de dados, criação e configuração de gateways para integração e
                             atualização de dados em tempo real.</p>
                     </div>
@@ -149,35 +192,35 @@
         <div class="container">
             <h2 class="section-title"><i class="fa-solid fa-bolt"></i> Hard Skills</h2>
             <div class="skills-grid">
-                <div class="skill-card pbi">
+                <div class="skill-card pbi hover-glow">
                     <i class="fa-solid fa-chart-pie skill-icon"></i>
                     <h3>Power BI</h3>
                     <div class="skill-bar">
                         <div class="progress" style="width: 95%;"></div>
                     </div>
                 </div>
-                <div class="skill-card sql">
+                <div class="skill-card sql hover-glow">
                     <i class="fa-solid fa-database skill-icon"></i>
                     <h3>SQL Server</h3>
                     <div class="skill-bar">
                         <div class="progress" style="width: 80%;"></div>
                     </div>
                 </div>
-                <div class="skill-card pauto">
+                <div class="skill-card pauto hover-glow">
                     <i class="fa-solid fa-gears skill-icon"></i>
                     <h3>Power Automate</h3>
                     <div class="skill-bar">
                         <div class="progress" style="width: 90%;"></div>
                     </div>
                 </div>
-                <div class="skill-card papps">
+                <div class="skill-card papps hover-glow">
                     <i class="fa-solid fa-mobile-screen-button skill-icon"></i>
                     <h3>Power Apps</h3>
                     <div class="skill-bar">
                         <div class="progress" style="width: 40%;"></div>
                     </div>
                 </div>
-                <div class="skill-card py">
+                <div class="skill-card py hover-glow">
                     <i class="fa-brands fa-python skill-icon"></i>
                     <h3>Python</h3>
                     <div class="skill-bar">
@@ -191,27 +234,35 @@
     <!-- Certificações -->
     <section id="certificacoes" class="certifications fade-in-section">
         <div class="container">
-            <h2 class="section-title"><i class="fa-solid fa-award"></i> Certificações</h2>
+            <h2 class="section-title"><i class="fa-solid fa-award"></i> <span data-pt="Certificações"
+                    data-en="Certifications">Certificações</span></h2>
             <div class="cert-grid">
-                <div class="cert-card">
+                <div class="cert-card hover-glow">
                     <i class="fa-brands fa-python cert-icon"></i>
                     <div class="cert-info">
                         <h3>Python Essentials 1</h3>
-                        <p>Fundamentos de programação em Python.</p>
+                        <p data-pt="Fundamentos de programação em Python." data-en="Python programming fundamentals.">
+                            Fundamentos de programação em Python.</p>
                     </div>
                 </div>
-                <div class="cert-card">
+                <div class="cert-card hover-glow">
                     <i class="fa-solid fa-diagram-project cert-icon"></i>
                     <div class="cert-info">
-                        <h3>Certificação de Implementação de Processos</h3>
-                        <p>Automação e mapeamento de fluxos.</p>
+                        <h3 data-pt="Certificação de Implementação de Processos"
+                            data-en="Process Implementation Certification">Certificação de Implementação de Processos
+                        </h3>
+                        <p data-pt="Automação e mapeamento de fluxos." data-en="Flow mapping and automation.">Automação
+                            e mapeamento de fluxos.</p>
                     </div>
                 </div>
-                <div class="cert-card">
+                <div class="cert-card hover-glow">
                     <i class="fa-solid fa-sitemap cert-icon"></i>
                     <div class="cert-info">
-                        <h3>Gerente de Processo do Pipefy</h3>
-                        <p>Gerenciamento e otimização usando Pipefy.</p>
+                        <h3 data-pt="Gerente de Processo do Pipefy" data-en="Pipefy Process Manager">Gerente de Processo
+                            do Pipefy</h3>
+                        <p data-pt="Gerenciamento e otimização usando Pipefy."
+                            data-en="Management and optimization using Pipefy.">Gerenciamento e otimização usando
+                            Pipefy.</p>
                     </div>
                 </div>
             </div>
@@ -221,18 +272,23 @@
     <!-- Footer -->
     <footer id="contato">
         <div class="footer-content">
-            <h2>Vamos construir algo juntos?</h2>
-            <p>Se você precisa otimizar os processos da sua empresa ou integrar sistemas, entre em contato.</p>
+            <h2 data-pt="Vamos construir algo juntos?" data-en="Let's build something together?">Vamos construir algo
+                juntos?</h2>
+            <p data-pt="Se você precisa otimizar os processos da sua empresa ou integrar sistemas, entre em contato."
+                data-en="If you need to optimize your company's processes or integrate systems, get in touch.">Se você
+                precisa otimizar os processos da sua empresa ou integrar sistemas, entre em contato.</p>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/felipeurbanekg/" class="social-btn" title="LinkedIn"><i
                         class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://github.com/NekQH" class="social-btn" title="GitHub"><i
                         class="fa-brands fa-github"></i></a>
-                <a href="lipe.urbanek@gmail.com" class="social-btn" title="E-mail"><i
+                <a href="mailto:lipe.urbanek@gmail.com" class="social-btn" title="E-mail"><i
                         class="fa-solid fa-envelope"></i></a>
             </div>
         </div>
-        <p class="copyright">&copy; 2026 Felipe. Feito com muito código e café ☕</p>
+        <p class="copyright" data-pt="&copy; 2026 Felipe. Feito com muito código e café ☕"
+            data-en="&copy; 2026 Felipe. Made with lots of code and coffee ☕">&copy; 2026 Felipe. Feito com muito código
+            e café ☕</p>
     </footer>
 
     <script src="script.js"></script>

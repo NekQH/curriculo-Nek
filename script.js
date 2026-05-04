@@ -56,3 +56,57 @@ window.addEventListener('scroll', () => {
         navbar.style.boxShadow = 'none';
     }
 });
+
+// --- TELA DE CARREGAMENTO ---
+window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+    // Adiciona um pequeno delay para a animação ser vista com clareza
+    setTimeout(() => {
+        loader.classList.add('hidden');
+    }, 800);
+});
+
+// --- INTERNACIONALIZAÇÃO (i18n) ---
+const langToggleBtn = document.getElementById('lang-toggle');
+const langPtEl = document.querySelector('.lang-pt');
+const langEnEl = document.querySelector('.lang-en');
+
+// Recupera a preferência salva no localStorage (padrão é 'pt')
+let currentLang = localStorage.getItem('portfolioLang') || 'pt';
+
+// Função para aplicar os textos baseados no idioma
+function applyLanguage(lang) {
+    const elementsToTranslate = document.querySelectorAll('[data-pt]');
+    
+    elementsToTranslate.forEach(el => {
+        if (lang === 'en' && el.dataset.en) {
+            el.innerHTML = el.dataset.en;
+        } else {
+            el.innerHTML = el.dataset.pt;
+        }
+    });
+
+    // Atualiza os estilos do botão
+    if (lang === 'en') {
+        langEnEl.classList.add('active');
+        langPtEl.classList.remove('active');
+    } else {
+        langPtEl.classList.add('active');
+        langEnEl.classList.remove('active');
+    }
+    
+    // Salva a escolha
+    localStorage.setItem('portfolioLang', lang);
+    currentLang = lang;
+}
+
+// Aplica o idioma inicial assim que o DOM carregar
+document.addEventListener('DOMContentLoaded', () => {
+    applyLanguage(currentLang);
+});
+
+// Evento do botão de troca
+langToggleBtn.addEventListener('click', () => {
+    const newLang = currentLang === 'pt' ? 'en' : 'pt';
+    applyLanguage(newLang);
+});
